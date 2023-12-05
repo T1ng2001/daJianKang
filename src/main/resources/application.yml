@@ -7,7 +7,19 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     # TODO:修改数据库名称
-    url: jdbc:mysql://localhost:3306/ts_db?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/djk_db?serverTimezone=UTC
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis-plus:
+  type-aliases-package: com.djk.domain
+  global-config:
+    db-config:
+      id-type: auto
+
+knife4j:
+  enable: true
+  openapi:
+    title: 接口文档
+    description: "接口文档"

@@ -9,19 +9,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("tbl_user")
-public class User {
-    @TableId(value = "uid", type = IdType.ASSIGN_ID)
-    private String uid;
-    @TableField(value = "union_id")
-    private String unionId;
-    @TableField(value = "nick_name")
-    private String nickName;
-    @TableField(value = "icon")
-    private String icon;
+@TableName("tbl_location")
+public class Location {
+    @TableId(value = "location_id", type = IdType.AUTO)
+    private Long locationId;
+    @TableField("location_name")
+    private String locationName;
 }
