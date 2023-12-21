@@ -1,7 +1,7 @@
 package com.djk.service.Impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.djk.domain.ServiceWorker;
+import com.djk.domain.po.ServiceWorker;
 import com.djk.mapper.serviceWorkerMapper;
 import com.djk.service.IServiceWorkerService;
 import org.springframework.stereotype.Service;

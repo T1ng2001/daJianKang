@@ -1,4 +1,4 @@
-package com.djk.domain;
+package com.djk.domain.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -38,7 +38,7 @@ public class HealthInfoVo {
     @ApiModelProperty("血脂-高密度脂蛋白")
     private Double bloodFatHdl;
     @ApiModelProperty("血脂-低密度脂蛋白")
-    private Double blood_fat_ldl;
+    private Double bloodFatLdl;
     @ApiModelProperty("血糖")
     private Double bloodGlucose;
 }

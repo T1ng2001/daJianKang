@@ -1,4 +1,4 @@
-package com.djk.domain;
+package com.djk.domain.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -26,10 +26,10 @@ public class UserInfo {
     private String uid;
     @TableField(value = "user_name")
     @ApiModelProperty("用户姓名")
-    private String userName;
+    private String username;
     @TableField(value = "gender")
     @ApiModelProperty("用户性别")
-    private String gender;
+    private int gender;
     @TableField(value = "age")
     @ApiModelProperty("用户年龄")
     private int age;

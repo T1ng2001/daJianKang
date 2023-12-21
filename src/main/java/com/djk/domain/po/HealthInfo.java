@@ -1,4 +1,4 @@
-package com.djk.domain;
+package com.djk.domain.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.ibatis.type.JdbcType;
 
 import java.util.Date;
 
@@ -26,7 +27,10 @@ public class HealthInfo {
     @TableField(value = "uid")
     @ApiModelProperty("用户ID")
     private String uid;
-    @TableField(value = "testing_time")
+    @TableField(value = "cid")
+    @ApiModelProperty("课程ID")
+    private Long cid;
+    @TableField(value = "testing_time", jdbcType = JdbcType.DATE)
     @ApiModelProperty("检测时间")
     private Date testingTime;
     @TableField(value = "weight")
@@ -55,7 +59,7 @@ public class HealthInfo {
     private Double bloodFatHdl;
     @TableField(value = "blood_fat_ldl")
     @ApiModelProperty("血脂-低密度脂蛋白")
-    private Double blood_fat_ldl;
+    private Double bloodFatLdl;
     @TableField(value = "blood_glucose")
     @ApiModelProperty("血糖")
     private Double bloodGlucose;

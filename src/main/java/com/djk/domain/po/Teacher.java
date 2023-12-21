@@ -1,4 +1,4 @@
-package com.djk.domain;
+package com.djk.domain.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

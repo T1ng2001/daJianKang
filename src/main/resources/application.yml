@@ -4,10 +4,12 @@ server:
     context-path: /
 
 spring:
+  jackson:
+    time-zone: GMT+8
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     # TODO:修改数据库名称
-    url: jdbc:mysql://localhost:3306/djk_db?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/djk_db?serverTimezone=GMT%2B8
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource

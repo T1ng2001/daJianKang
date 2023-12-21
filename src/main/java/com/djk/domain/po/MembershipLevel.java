@@ -1,4 +1,4 @@
-package com.djk.domain;
+package com.djk.domain.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -15,13 +15,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ApiModel("健康服务人员类")
-@TableName("tbl_service_worker")
-public class ServiceWorker {
-    @TableId(value = "service_worker_id", type = IdType.AUTO)
-    @ApiModelProperty("健康服务人员表ID")
-    private Long serviceWorkerId;
-    @TableField(value = "service_worker_name")
-    @ApiModelProperty("健康服务人员姓名")
-    private String serviceWorkerName;
+@ApiModel("会员级别类")
+@TableName("tbl_membership_level")
+public class MembershipLevel {
+    @TableId(value = "level_id", type = IdType.AUTO)
+    @ApiModelProperty("会员级别表ID")
+    private Long levelId;
+    @TableField(value = "level_name")
+    @ApiModelProperty("会员级别")
+    private String levelName;
 }

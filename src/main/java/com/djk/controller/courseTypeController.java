@@ -1,14 +1,11 @@
 package com.djk.controller;
 
-import com.djk.domain.CourseType;
+import com.djk.domain.po.CourseType;
 import com.djk.service.ICourseTypeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,6 +16,33 @@ import java.util.List;
 public class courseTypeController {
     @Autowired
     private ICourseTypeService courseTypeService;
+
+    @PostMapping
+    @ApiOperation("新增课程类型")
+    public Result save(@RequestBody CourseType courseType) {
+        boolean flag = courseTypeService.save(courseType);
+        Integer code = flag ? Code.COURSE_TYPE_DELETE_SUCCESS : Code.COURSE_TYPE_INSERT_FAIL;
+
+        return Result.builder().code(code).build();
+    }
+
+    @DeleteMapping("/{courseTypeId}")
+    @ApiOperation("删除课程类型")
+    public Result deleteById(@PathVariable Long courseTypeId) {
+        boolean flag = courseTypeService.removeById(courseTypeId);
+        Integer code = flag ? Code.COURSE_TYPE_DELETE_SUCCESS : Code.COURSE_TYPE_DELETE_FAIL;
+
+        return Result.builder().code(code).build();
+    }
+
+    @PutMapping
+    @ApiOperation("修改课程类型")
+    public Result update(@RequestBody CourseType courseType) {
+        boolean flag = courseTypeService.updateById(courseType);
+        Integer code = flag ? Code.COURSE_TYPE_UPDATE_SUCCESS : Code.COURSE_TYPE_UPDATE_FAIL;
+
+        return Result.builder().code(code).build();
+    }
 
     @GetMapping
     @ApiOperation("查询所有课程类型")

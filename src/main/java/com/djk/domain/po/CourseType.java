@@ -1,4 +1,4 @@
-package com.djk.domain;
+package com.djk.domain.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -15,13 +15,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ApiModel("地区类")
-@TableName("tbl_location")
-public class Location {
-    @TableId(value = "location_id", type = IdType.AUTO)
-    @ApiModelProperty("地区表ID")
-    private Long locationId;
-    @TableField("location_name")
-    @ApiModelProperty("地区名字")
-    private String locationName;
+@ApiModel("课程类型类")
+@TableName("tbl_course_type")
+public class CourseType {
+    @TableId(value = "course_type_id", type = IdType.AUTO)
+    @ApiModelProperty("课程类型表ID")
+    private Long courseTypeId;
+    @TableField(value = "course_type")
+    @ApiModelProperty("课程类型")
+    private String courseType;
 }

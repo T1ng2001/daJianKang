@@ -1,9 +1,9 @@
 package com.djk.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.djk.domain.po.ServiceWorker;
+import com.djk.domain.po.courseSelect;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface serviceWorkerMapper extends BaseMapper<ServiceWorker> {
+public interface courseSelectMapper extends BaseMapper<courseSelect> {
 }
